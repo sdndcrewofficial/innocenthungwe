@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>In Loving Memory of Pastor Innocent Hungwe</title>
+    <link rel="icon" type="image/jpeg" href="images/Gold Black and White Grandfather Photo Death Announcement.jpg"> 
+    <style>
+        /* Global Styles */
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #e8e8e8; /* Lighter grey background */
+            color: #222; /* Darker text for readability */
+        }
+        .container {
+            width: 90%; /* Slightly wider container */
+            max-width: 1200px;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px 0;
+        }
+        header {
+            background: #1e3a5f; /* Darker navy blue for solemnity */
+            color: white;
+            padding: 60px 0 40px; /* More vertical space */
+            text-align: center;
+            border-bottom: 8px solid #0056b3; /* Deep blue accent for SDA link */
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3.5em;
+            letter-spacing: 1px;
+        }
+        header p {
+            font-style: italic;
+            font-size: 1.3em;
+            margin-top: 10px;
+        }
+        /* Section Styles */
+        .tribute-section {
+            background: white;
+            padding: 30px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0,0,0,0.15); /* More pronounced shadow */
+        }
+        .tribute-section h2 {
+            color: #0056b3; /* Deep blue heading color */
+            border-bottom: 2px solid #ddd;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            font-weight: 700;
+        }
+        .personal-message {
+            background: #f0e6ff; /* Light lavender for emotional content */
+            border-left: 6px solid #6a0dad; /* Deeper purple accent */
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 10px;
+            font-style: italic;
+        }
+        /* Main Photo */
+        .main-photo-container {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 0;
+            background-color: #fcfcfc;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .main-photo-container img {
+            width: 300px; /* Slightly larger square image */
+            height: 300px;
+            object-fit: cover;
+            border-radius: 50%; /* Circular main photo */
+            border: 8px solid #a8a8a8;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.4);
+        }
+        /* Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .gallery a {
+            position: relative;
+            display: block;
+            overflow: hidden;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+            transition: transform 0.2s;
+        }
+        .gallery a:hover {
+            transform: scale(1.03);
+        }
+        .gallery img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 5px;
+            transition: opacity 0.3s;
+        }
+        .gallery a:hover img {
+            opacity: 0.7;
+        }
+        .view-full-text { /* Added style for the new hover text */
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bold;
+            font-size: 1.1em;
+            background: rgba(0, 0, 0, 0.6);
+            padding: 5px 10px;
+            border-radius: 3px;
+            opacity: 0;
+            transition: opacity 0.3s;
+            pointer-events: none;
+        }
+        .gallery a:hover .view-full-text {
+            opacity: 1;
+        }
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: #1e3a5f;
+            color: white;
+            margin-top: 30px;
+            font-size: 0.95em;
+            border-top: 4px solid #0056b3;
+        }
+        footer a {
+            color: #79c8ff;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+        /* LIGHTBOX STYLES */
+        .lightbox {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95); /* Darker background */
+            text-align: center;
+            z-index: 1000;
+            padding: 30px;
+            box-sizing: border-box;
+        }
+        .lightbox:target {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .lightbox img {
+            max-width: 95%;
+            max-height: 95%;
+            display: block;
+            margin: auto;
+            border: 8px solid white;
+            box-shadow: 0 0 40px rgba(255, 255, 255, 0.2);
+            object-fit: contain;
+        }
+        .close-btn {
+            position: absolute;
+            top: 20px;
+            right: 40px;
+            color: #fff;
+            font-size: 50px;
+            font-weight: normal; /* Less bold X */
+            transition: 0.3s;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .close-btn:hover,
+        .close-btn:focus {
+            color: #ff0000; /* Red close button on hover */
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <h1>In Loving Memory of</h1>
+            <h1>Pastor Innocent Hungwe</h1>
+            <p>Left us November 1, 2025 | A Servant of the Gospel</p>
+        </div>
+    </header>
+
+    <div class="container">
+
+        <div class="main-photo-container">
+            <img src="images/Gold Black and White Grandfather Photo Death Announcement - Copy.png" 
+                 alt="Main portrait of Pastor Innocent Hungwe"
+                 title="Pastor Innocent Hungwe">
+        </div>
+
+        <div class="tribute-section">
+            <p style="text-align: center; font-size: 1.3em; font-weight: bold; color: #6a0dad;">
+                “Blessed are those who mourn, for they will be comforted.” — Matthew 5:4
+            </p>
+            <p>
+                It is with heavy hearts that we announce the passing of our beloved Pastor Innocent Hungwe. He was a dedicated shepherd, a faithful servant, and a man whose life was a testament to the principles of the Seventh-day Adventist Church. His commitment to God’s Word and his anticipation of the Second Coming of Christ were the foundations of his ministry and a true legacy in the world of preaching and working for God.
+            </p>
+        </div>
+
+        <div class="personal-message">
+            <h2>A Grandson's Farewell</h2>
+            <p>
+                My dearest Grandfather, Pastor Innocent Hungwe, there are no words to truly capture the void your passing has left in my heart. I wanted to build this website for you while you were still here—to celebrate your ministry, to archive your sermons, and to show the world the depth of your faith and your gentle soul. I wanted to show you how much I adored you.
+            </p>
+            <p>
+                Building it now, in your honor, is the hardest and most heartfelt thing I have ever done. Every line of code, every uploaded picture, is a tear and a memory shared. Thank you for everything you taught me about faith, integrity, and the blessed hope. I loved you wholeheartedly, and your legacy will never fade.
+            </p>
+            <p style="text-align: right; font-weight: bold;">
+                — Your Grandson, Hillary Mpofu
+            </p>
+        </div>
+        
+        <div class="tribute-section">
+            <h2>A Life of Ministry and Prophecy (The Three Angels' Messages)</h2>
+            <p>
+                Pastor Hungwe dedicated his life to sharing the Three Angels' Messages with passion and conviction. He often quoted the foundational text of his ministry:
+            </p>
+            <blockquote style="border-left: 4px solid #007bff; margin: 15px 0; padding-left: 15px; background: #f9f9f9;">
+                "Then I saw another angel flying in the midst of heaven, having the everlasting gospel to preach to those who dwell on the earth—to every nation, tribe, tongue, and people—saying with a loud voice, 'Fear God and give glory to Him, for the hour of His judgment has come; and worship Him who made heaven and earth, the sea and springs of water.'" — Revelation 14:6-7
+            </blockquote>
+            <p>
+                He was a profound student of Scripture, focusing on the end-time prophecies, including the Sabbath and the Mark of the Beast. His voice resonated with truth, guiding many to a deeper understanding of God's plan. He lived by the faith of Jesus, always reminding us:
+            </p>
+            <blockquote style="border-left: 4px solid #007bff; margin: 15px 0; padding-left: 15px; background: #f9f9f9;">
+                "Here is the patience of the saints; here are those who keep the commandments of God and the faith of Jesus." — Revelation 14:12
+            </blockquote>
+            <p>
+                He held a deep and abiding love for the writings of Ellen G. White, which he often referred to as a "lesser light leading to the greater light." His sermons were frequently illuminated by her counsels, particularly from <em>The Great Controversy</em> and <em>Steps to Christ</em>. His legacy will live on through the countless souls he led to a deeper relationship with Jesus and through the profound truths he shared from the pulpit.
+            </p>
+        </div>
+
+        <div class="tribute-section">
+            <h2>Photo Gallery: Cherished Memories</h2>
+            <p>
+                Here we share some cherished moments from the life and ministry of Pastor Innocent Hungwe. His smile, his presence, and his passion for God's work will forever be etched in our hearts. Click any image to view it fully.
+            </p>
+            <div class="gallery">
+                <a href="#lightbox1">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.36_79313a6b.jpg" alt="Pastor Innocent Hungwe in a black suit pointing">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox2">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.37_d1b4a26b.jpg" alt="Pastor Innocent Hungwe speaking with a fellow pastor">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox3">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.37_b98a675e.jpg" alt="Pastor Innocent Hungwe and a colleague outdoors under a tree">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox4">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.38_28a884b2.jpg" alt="Pastor Innocent Hungwe speaking at a church event">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox5">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.37_ed48b4bb.jpg" alt="Pencil portrait sketch of Pastor Innocent Hungwe">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox6">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.38_6dacdd81.jpg" alt="Pastor Innocent Hungwe and a colleague at a meeting">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox7">
+                    <img src="images/WhatsApp Image 2025-11-01 at 21.40.01_59e5cca8.jpg" alt="Close-up photo of Pastor Innocent Hungwe in a suit">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox8">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.39_c0526be0.jpg" alt="Pastor Innocent Hungwe in a suit and tie seated in a car">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox9">
+                    <img src="images/WhatsApp Image 2025-11-01 at 22.25.39_d061af00.jpg" alt="Pastor Innocent Hungwe walking at an outdoor event">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox10">
+                    <img src="images/Gold Black and White Grandfather Photo Death Announcement.png" alt="Gold and Black Memorial announcement photo">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+                <a href="#lightbox11">
+                    <img src="images/innocent hungwe.jpg" alt="In Loving Memory of Innocent Hungwe, Matthew 5:4">
+                    <span class="view-full-text">View Full Image</span>
+                </a>
+            </div>
+        </div>
+
+        <div class="tribute-section">
+            <h2>Digital Condolences Book</h2>
+            <p>
+                If Pastor Hungwe touched your life, please share a favorite memory, a message of comfort, or a passage of scripture that reminds you of him. Your words will be a comfort to the family and a lasting tribute to his influence.
+            </p>
+            <p style="text-align: center; font-weight: bold;">
+                hillaryeland@gmail.com
+            </p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>&copy; 2025 In Memory of Pastor Innocent Hungwe.</p>
+        <p>
+            “The righteous perisheth, and no man layeth it to heart.” - Isaiah 57:1
+        </p>
+        <p style="margin-top: 15px;">
+            Made with love by his grandson, Hillary Mpofu.
+            <br>
+            For any inquiries or to share additional memories, please contact Hillary:
+            <br> Phone: <a href="tel:+263713360417">+263 713 360 417</a>
+            | Email: <a href="mailto:hillaryeland@gmail.com">hillaryeland@gmail.com</a>
+            | TikTok: <a href="https://www.tiktok.com/@hillaryeland" target="_blank">@hillaryeland</a>
+            | Facebook: <a href="https://www.facebook.com/hillary.eland" target="_blank">Hillary Eland</a>
+        </p>
+    </footer>
+
+    <div id="lightbox1" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.36_79313a6b.jpg" alt="Pastor Innocent Hungwe in a black suit pointing">
+    </div>
+    <div id="lightbox2" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.37_d1b4a26b.jpg" alt="Pastor Innocent Hungwe speaking with a fellow pastor">
+    </div>
+    <div id="lightbox3" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.37_b98a675e.jpg" alt="Pastor Innocent Hungwe and a colleague outdoors under a tree">
+    </div>
+    <div id="lightbox4" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.38_28a884b2.jpg" alt="Pastor Innocent Hungwe speaking at a church event">
+    </div>
+    <div id="lightbox5" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.37_ed48b4bb.jpg" alt="Pencil portrait sketch of Pastor Innocent Hungwe">
+    </div>
+    <div id="lightbox6" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.38_6dacdd81.jpg" alt="Pastor Innocent Hungwe and a colleague at a meeting">
+    </div>
+    <div id="lightbox7" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 21.40.01_59e5cca8.jpg" alt="Close-up photo of Pastor Innocent Hungwe in a suit">
+    </div>
+    <div id="lightbox8" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.39_c0526be0.jpg" alt="Pastor Innocent Hungwe in a suit and tie seated in a car">
+    </div>
+    <div id="lightbox9" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/WhatsApp Image 2025-11-01 at 22.25.39_d061af00.jpg" alt="Pastor Innocent Hungwe walking at an outdoor event">
+    </div>
+    <div id="lightbox10" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/Gold Black and White Grandfather Photo Death Announcement.png" alt="Gold and Black Memorial announcement photo">
+    </div>
+    <div id="lightbox11" class="lightbox">
+        <a href="#" class="close-btn">&times;</a>
+        <img src="images/innocent hungwe.jpg" alt="In Loving Memory of Innocent Hungwe, Matthew 5:4">
+    </div>
+</body>
+</html>
