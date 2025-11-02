@@ -63,7 +63,7 @@
             border-radius: 10px;
             font-style: italic;
         }
-        /* Main Photo */
+        /* Main Photo - CHANGED BACK TO SQUARE */
         .main-photo-container {
             text-align: center;
             margin-bottom: 40px;
@@ -73,10 +73,10 @@
             box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
         .main-photo-container img {
-            width: 300px; /* Slightly larger square image */
-            height: 300px;
+            width: 300px; /* Square width */
+            height: 300px; /* Square height */
             object-fit: cover;
-            border-radius: 50%; /* Circular main photo */
+            border-radius: 15px; /* Square with rounded corners */
             border: 8px solid #a8a8a8;
             box-shadow: 0 8px 20px rgba(0,0,0,0.4);
         }
@@ -108,7 +108,7 @@
         .gallery a:hover img {
             opacity: 0.7;
         }
-        .view-full-text { /* Added style for the new hover text */
+        .view-full-text {
             position: absolute;
             top: 50%;
             left: 50%;
@@ -151,7 +151,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: rgba(0, 0, 0, 0.95); /* Darker background */
+            background: rgba(0, 0, 0, 0.95);
             text-align: center;
             z-index: 1000;
             padding: 30px;
@@ -177,14 +177,14 @@
             right: 40px;
             color: #fff;
             font-size: 50px;
-            font-weight: normal; /* Less bold X */
+            font-weight: normal;
             transition: 0.3s;
             cursor: pointer;
             text-decoration: none;
         }
         .close-btn:hover,
         .close-btn:focus {
-            color: #ff0000; /* Red close button on hover */
+            color: #ff0000;
         }
     </style>
 </head>
